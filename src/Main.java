@@ -5,6 +5,8 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Drinks drinks = new Drinks();
+        System.out.println("Меню: " + drinks.menu());
+        System.out.println("Введіть назву напою");
         String drinksChoice = scanner.next();
          drinksChoice = drinksChoice.toUpperCase();
          DrinksMachine drinksMachine = DrinksMachine.valueOf(drinksChoice);
@@ -31,7 +33,7 @@ public class Main {
                  System.out.println(" Ви вибрали Coca_Cola ");
                  break;
              default:
-                 System.out.println("Такого напою немає. \n Виберіть з наявних : " + drinksMachine.menu() );
+                 System.out.println("Такого напою немає. \n Виберіть з наявних : " + drinks.menu() );
 
          }
 

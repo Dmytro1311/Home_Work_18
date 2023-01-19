@@ -8,6 +8,9 @@ public class Drinks {
     public static final int waterPrice = 5;
     public static final int coca_colaPrice = 16;
     Scanner scanner = new Scanner(System.in);
+    public String menu(){
+        return (" Є в  наявності: " + "\n" +  DrinksMachine.COFFE + "\n" +  DrinksMachine.TEA + " \n"  +   DrinksMachine.LEMONAD + "\n" +  DrinksMachine.MOXITO + "\n" +  DrinksMachine.WATER + "\n" +  DrinksMachine.COCA_COLA );
+    }
 
     public int coffePrepare(){
         System.out.println("Вартість чашки кави  " + coffePrice + "грн" );
