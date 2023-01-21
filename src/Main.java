@@ -9,8 +9,10 @@ public class Main {
             System.out.println("Меню: " + drinks.menu());
             System.out.println("Введіть назву напою");
             String drinksChoice = scanner.next();
+
             drinksChoice = drinksChoice.toUpperCase();
             DrinksMachine drinksMachine = DrinksMachine.valueOf(drinksChoice);
+
             switch (drinksMachine) {
                 case COFFE:
                     System.out.println(" Ви вибрали каву ");
@@ -49,6 +51,7 @@ public class Main {
                 if (answer.equals("NO")) {
                     drinkMore = false;
                     oneMore = false;
+                    System.out.println("До сплати " + drinks.totalPrice());
                 } else if (answer.equals("YES")) {
                     drinkMore = false;
                 } else {
